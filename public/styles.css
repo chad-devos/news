@@ -1,5 +1,24 @@
 .newspage {
-   background-image: url(newspaper_background.jpg);
-   background-size: cover;
-   margin-top: none
+   background-color: peru;
+   margin-top: none;
+   margin-left: 10%;
+   margin-right: 10%
  }
+
+.current {
+   background-color: rgba(33, 143, 247, 0.404);
+   margin-top: none;
+ }
+
+ .tom {
+   background-color: rgba(24, 108, 187, 0.404);
+   background-size: cover;
+   margin-top: none;
+ }
+
+ .next {
+   background-color: rgba(19, 84, 145, 0.404);
+   background-size: cover;
+   margin-top: none;
+ }
+
