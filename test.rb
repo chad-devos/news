@@ -9,8 +9,12 @@ results = Geocoder.search("paris")
     @forecast = ForecastIO.forecast(lat, lng)
     @current_temperature = @forecast["currently"]["temperature"]
     @current_conditions = @forecast["currently"]["summary"]
+    @future_temps = []
 
+    for day in @forecast["daily"]["data"]
+        @future_temps << day["temperatureHigh"]
+    end
     # puts lat_lng
     # puts @current_temperature
     # puts @current_conditions
-    puts @forecast
+    puts @future_temps[0]
