@@ -1,8 +1,13 @@
 .newspage {
-   background-color: peru;
+   background-image: linear-gradient(tan, rgb(185, 128, 70));
    margin-top: none;
-   margin-left: 10%;
-   margin-right: 10%
+   margin-left: 5%;
+   margin-right: 5%
+ }
+
+ .weather {
+   margin-left: 5%;
+   margin-right: 5%
  }
 
 .current {
@@ -22,3 +27,7 @@
    margin-top: none;
  }
 
+
+.subtitle {
+    font-style: italic
+}
