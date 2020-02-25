@@ -38,7 +38,7 @@ get "/news" do
     end
 
     for day in @forecast["daily"]["data"]
-        @future_conditions << day["summary"]
+        @future_conditions << day["summary"].downcase
     end
 
     for article in news["articles"]

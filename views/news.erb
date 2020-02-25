@@ -22,24 +22,27 @@
   </head>
   
   <body>
-<div class="container mt-5">
-    <h2>The current weather is</h2>
-    <h3><%= @current_temperature %> Degrees</h3>
-    <h3><%= @current_conditions %></h3>
-</div>
 
-<div class="container mt-5">
-    <h2>Tomorrow's forecast is</h2>
-    <h3><%= @future_temps[0] %> Degrees and <%= @future_conditions[0] %></h3>
-</div>
-
-<div class="container mt-5">
-    <h2>Next three day forecast: </h2>
+<div class="newspage">
+  <div class="container weather">
+  <div class="row">
+    <div class="col-sm">
+        <h2>Current weather: </h2>
+        <h4><%= @current_temperature %> Degrees and <%= @current_conditions.downcase %>.</h4>
+    </div>
+    <div class="col-sm">
+        <h2>Tomorrow's forecast: </h2>
+        <h4><%= @future_temps[0] %> Degrees and <%= @future_conditions[0] %></h4>
+    </div>
+    <div class="col-sm">
+        <h2>Next three days: </h2>
     <ol>
-        <li><%= @future_temps[1] %> Degrees and <%= @future_conditions[1] %></li>
-        <li><%= @future_temps[2] %> Degrees and <%= @future_conditions[2] %></li>
-        <li><%= @future_temps[3] %> Degrees and <%= @future_conditions[3] %></li>
+        <% for item in (1..3) %>
+        <li><%= @future_temps[item] %> Degrees and <%= @future_conditions[item] %></li>
+        <% end %>
     </ol>
+    </div>
+  </div>
 </div>
 
 
@@ -52,9 +55,11 @@
         <% links = links+1 %>
     <% end %>
   </ol>
-
+</div>
   
+
 </div>
 
+ <hr>      
   </body>
 </html>
