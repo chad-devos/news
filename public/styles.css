@@ -31,3 +31,8 @@
 .subtitle {
     font-style: italic
 }
+
+.ask {
+    background-image: radial-gradient(lightblue, rgb(113, 181, 236) );
+    background-size: cover
+}
